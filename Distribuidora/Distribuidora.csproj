@@ -72,6 +72,9 @@
     <Compile Include="Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Egresos.resx">
+      <DependentUpon>Egresos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ingresos.resx">
       <DependentUpon>Ingresos.cs</DependentUpon>
     </EmbeddedResource>
