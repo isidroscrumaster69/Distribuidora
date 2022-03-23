@@ -37,14 +37,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblcon = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(289, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 29);
@@ -72,7 +74,7 @@
             // btnIngresar
             // 
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(263, 305);
+            this.btnIngresar.Location = new System.Drawing.Point(263, 291);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(229, 43);
             this.btnIngresar.TabIndex = 4;
@@ -83,18 +85,20 @@
             // chkPw
             // 
             this.chkPw.AutoSize = true;
+            this.chkPw.BackColor = System.Drawing.Color.Transparent;
             this.chkPw.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkPw.Location = new System.Drawing.Point(512, 224);
             this.chkPw.Name = "chkPw";
             this.chkPw.Size = new System.Drawing.Size(166, 24);
             this.chkPw.TabIndex = 5;
             this.chkPw.Text = "Mostrar contrasena";
-            this.chkPw.UseVisualStyleBackColor = true;
+            this.chkPw.UseVisualStyleBackColor = false;
             this.chkPw.CheckedChanged += new System.EventHandler(this.chkPw_CheckedChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(305, 99);
             this.label2.Name = "label2";
@@ -105,6 +109,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(332, 203);
             this.label3.Name = "label3";
@@ -124,12 +129,28 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
+            // lblcon
+            // 
+            this.lblcon.AutoSize = true;
+            this.lblcon.BackColor = System.Drawing.Color.White;
+            this.lblcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcon.Location = new System.Drawing.Point(290, 353);
+            this.lblcon.Name = "lblcon";
+            this.lblcon.Size = new System.Drawing.Size(175, 20);
+            this.lblcon.TabIndex = 11;
+            this.lblcon.TabStop = true;
+            this.lblcon.Text = "¿Olvido su contraseña?";
+            this.lblcon.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblcon_LinkClicked);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(816, 468);
+            this.Controls.Add(this.lblcon);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -157,6 +178,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel lblcon;
     }
 }
 

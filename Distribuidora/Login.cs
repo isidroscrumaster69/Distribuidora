@@ -24,12 +24,15 @@ namespace Distribuidora
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            var reportes=new Reportes();
+            var menu=new Menu();
 
             if(txtUsername.Text=="admin" && txtPassword.Text=="admin")
             {
-                reportes.Show();
-            
+                menu.Show();
+                
+                this.Hide();
+                MessageBox.Show("Bienvenido", "Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             else
             {
@@ -54,5 +57,12 @@ namespace Distribuidora
         {
 
         }
+
+        private void lblcon_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Contactese con el gerente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+       
     }
 }

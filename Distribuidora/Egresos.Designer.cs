@@ -46,7 +46,7 @@
             // 
             // dtpfecha
             // 
-            this.dtpfecha.Location = new System.Drawing.Point(129, 99);
+            this.dtpfecha.Location = new System.Drawing.Point(185, 109);
             this.dtpfecha.Name = "dtpfecha";
             this.dtpfecha.Size = new System.Drawing.Size(200, 20);
             this.dtpfecha.TabIndex = 0;
@@ -54,9 +54,10 @@
             // lbltitulo
             // 
             this.lbltitulo.AutoSize = true;
+            this.lbltitulo.BackColor = System.Drawing.Color.Transparent;
             this.lbltitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltitulo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbltitulo.Location = new System.Drawing.Point(243, 12);
+            this.lbltitulo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbltitulo.Location = new System.Drawing.Point(272, 23);
             this.lbltitulo.Name = "lbltitulo";
             this.lbltitulo.Size = new System.Drawing.Size(110, 29);
             this.lbltitulo.TabIndex = 1;
@@ -66,7 +67,7 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(412, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(499, 23);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(177, 161);
@@ -77,9 +78,10 @@
             // lblfecha
             // 
             this.lblfecha.AutoSize = true;
+            this.lblfecha.BackColor = System.Drawing.Color.Transparent;
             this.lblfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfecha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblfecha.Location = new System.Drawing.Point(60, 99);
+            this.lblfecha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblfecha.Location = new System.Drawing.Point(116, 109);
             this.lblfecha.Name = "lblfecha";
             this.lblfecha.Size = new System.Drawing.Size(59, 18);
             this.lblfecha.TabIndex = 12;
@@ -88,9 +90,10 @@
             // lblmonto
             // 
             this.lblmonto.AutoSize = true;
+            this.lblmonto.BackColor = System.Drawing.Color.Transparent;
             this.lblmonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmonto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblmonto.Location = new System.Drawing.Point(60, 144);
+            this.lblmonto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblmonto.Location = new System.Drawing.Point(116, 154);
             this.lblmonto.Name = "lblmonto";
             this.lblmonto.Size = new System.Drawing.Size(56, 18);
             this.lblmonto.TabIndex = 13;
@@ -98,7 +101,7 @@
             // 
             // txtmonto
             // 
-            this.txtmonto.Location = new System.Drawing.Point(129, 144);
+            this.txtmonto.Location = new System.Drawing.Point(185, 154);
             this.txtmonto.Name = "txtmonto";
             this.txtmonto.Size = new System.Drawing.Size(142, 20);
             this.txtmonto.TabIndex = 14;
@@ -106,9 +109,10 @@
             // lblcodigo
             // 
             this.lblcodigo.AutoSize = true;
+            this.lblcodigo.BackColor = System.Drawing.Color.Transparent;
             this.lblcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcodigo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblcodigo.Location = new System.Drawing.Point(60, 193);
+            this.lblcodigo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblcodigo.Location = new System.Drawing.Point(116, 203);
             this.lblcodigo.Name = "lblcodigo";
             this.lblcodigo.Size = new System.Drawing.Size(62, 18);
             this.lblcodigo.TabIndex = 15;
@@ -116,7 +120,7 @@
             // 
             // txtcodigo
             // 
-            this.txtcodigo.Location = new System.Drawing.Point(129, 193);
+            this.txtcodigo.Location = new System.Drawing.Point(185, 203);
             this.txtcodigo.Name = "txtcodigo";
             this.txtcodigo.Size = new System.Drawing.Size(142, 20);
             this.txtcodigo.TabIndex = 16;
@@ -124,9 +128,10 @@
             // lblnombre
             // 
             this.lblnombre.AutoSize = true;
+            this.lblnombre.BackColor = System.Drawing.Color.Transparent;
             this.lblnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblnombre.Location = new System.Drawing.Point(60, 244);
+            this.lblnombre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblnombre.Location = new System.Drawing.Point(116, 254);
             this.lblnombre.Name = "lblnombre";
             this.lblnombre.Size = new System.Drawing.Size(68, 18);
             this.lblnombre.TabIndex = 17;
@@ -135,7 +140,7 @@
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(129, 242);
+            this.txtnombre.Location = new System.Drawing.Point(185, 252);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(142, 20);
             this.txtnombre.TabIndex = 18;
@@ -143,9 +148,9 @@
             // btncancelar
             // 
             this.btncancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncancelar.Location = new System.Drawing.Point(129, 314);
+            this.btncancelar.Location = new System.Drawing.Point(119, 340);
             this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(83, 40);
+            this.btncancelar.Size = new System.Drawing.Size(105, 60);
             this.btncancelar.TabIndex = 19;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
@@ -154,9 +159,9 @@
             // btnconfirmar
             // 
             this.btnconfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnconfirmar.Location = new System.Drawing.Point(388, 314);
+            this.btnconfirmar.Location = new System.Drawing.Point(387, 340);
             this.btnconfirmar.Name = "btnconfirmar";
-            this.btnconfirmar.Size = new System.Drawing.Size(83, 40);
+            this.btnconfirmar.Size = new System.Drawing.Size(100, 60);
             this.btnconfirmar.TabIndex = 20;
             this.btnconfirmar.Text = "Confirmar";
             this.btnconfirmar.UseVisualStyleBackColor = true;
@@ -166,7 +171,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(702, 469);
             this.Controls.Add(this.btnconfirmar);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.txtnombre);

@@ -34,7 +34,10 @@ namespace Distribuidora
 
         private void button1_Click(object sender, EventArgs e)
         {
+            var menu = new Menu();
 
+            menu.Show();
+            this.Hide();
         }
     }
 }

@@ -16,5 +16,18 @@ namespace Distribuidora
         {
             InitializeComponent();
         }
+
+        private void lbltitulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            var menu = new Menu();
+
+            menu.Show();
+            this.Hide();
+        }
     }
 }
