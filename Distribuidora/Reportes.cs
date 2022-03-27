@@ -44,5 +44,11 @@ namespace Distribuidora
             menu.Show();
             this.Hide();
         }
+
+        private void Reportes_Load(object sender, EventArgs e)
+        {
+            conexionbd conexion = new conexionbd();
+            conexion.abrir();
+        }
     }
 }

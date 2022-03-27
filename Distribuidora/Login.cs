@@ -55,7 +55,8 @@ namespace Distribuidora
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            conexionbd conexion = new conexionbd();
+            conexion.abrir();
         }
 
         private void lblcon_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
