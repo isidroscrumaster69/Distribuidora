@@ -45,5 +45,13 @@ namespace Distribuidora
             reportes.Show();
             this.Hide();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            var login= new Login();
+            this.Close();
+            login.Show();
+
+        }
     }
 }

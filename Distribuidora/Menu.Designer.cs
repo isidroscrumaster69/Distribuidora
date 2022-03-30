@@ -34,6 +34,7 @@
             this.btnIngreso = new System.Windows.Forms.Button();
             this.btnEgreso = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,6 +95,16 @@
             this.btnReportes.UseVisualStyleBackColor = true;
             this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(794, 512);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(121, 37);
+            this.btnSalir.TabIndex = 17;
+            this.btnSalir.Text = "Cerrar sesion";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -101,6 +112,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(939, 561);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnReportes);
             this.Controls.Add(this.btnEgreso);
             this.Controls.Add(this.btnIngreso);
@@ -122,5 +134,6 @@
         private System.Windows.Forms.Button btnIngreso;
         private System.Windows.Forms.Button btnEgreso;
         private System.Windows.Forms.Button btnReportes;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

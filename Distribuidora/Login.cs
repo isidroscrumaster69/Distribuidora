@@ -7,13 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Sql;
+using System.Data.OleDb;
+using System.Data.SqlClient;
 
 namespace Distribuidora
 {
     public partial class Login : Form
     {
+        SqlConnection con = new SqlConnection();
         public Login()
         {
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = "Data Source=DESKTOP-32488B5\\SQLEXPRESS;Initial Catalog =distribuidora;Integrated Security=True";
             InitializeComponent();
         }
 
@@ -26,19 +32,28 @@ namespace Distribuidora
         {
             var menu=new Menu();
 
-            if(txtUsername.Text=="admin" && txtPassword.Text=="admin")
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = "Data Source=DESKTOP-32488B5\\SQLEXPRESS;Initial Catalog =distribuidora;Integrated Security=True";
+            con.Open();
+            string user = txtUsername.Text;
+            string password = txtPassword.Text;
+            SqlCommand cmd = new SqlCommand("select name_user,password_user from users where name_user='" + txtUsername.Text + "'and password_user='" + txtPassword.Text + "'", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count > 0)
             {
+                MessageBox.Show("Login exitoso", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 menu.Show();
-                
                 this.Hide();
-                MessageBox.Show("Bienvenido", "Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             }
             else
             {
-                MessageBox.Show("Usuario/Contrasena incorrecta","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Nombre de usuario o contrasena incorrecto", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            con.Close();
         }
+    
 
 
         private void chkPw_CheckedChanged(object sender, EventArgs e)
@@ -55,8 +70,13 @@ namespace Distribuidora
 
         private void Login_Load(object sender, EventArgs e)
         {
-            conexionbd conexion = new conexionbd();
-            conexion.abrir();
+            
+            SqlConnection con = new SqlConnection("Data Source=DESKTOP-32488B5\\SQLEXPRESS;Initial Catalog =distribuidora;Integrated Security=True");
+            con.Open();
+
+            {
+            }
+
         }
 
         private void lblcon_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -64,6 +84,6 @@ namespace Distribuidora
             MessageBox.Show("Contactese con el gerente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-       
+
     }
 }

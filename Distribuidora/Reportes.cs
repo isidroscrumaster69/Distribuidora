@@ -50,5 +50,10 @@ namespace Distribuidora
             conexionbd conexion = new conexionbd();
             conexion.abrir();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
