@@ -19,7 +19,7 @@ namespace Distribuidora
         public Login()
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "Data Source=LAPTOP-V3B867SN;Initial Catalog =distribuidora;Integrated Security=True";
+            con.ConnectionString = "Data Source=LAPTOP-AH2SJNIQ\\SQLEXPRESS;Initial Catalog =distribuidora;Integrated Security=True";
             InitializeComponent();
         }
 
@@ -30,10 +30,10 @@ namespace Distribuidora
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            var menu=new Menu();
+            var menu = new Menu();
 
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "Data Source=LAPTOP-V3B867SN;Initial Catalog =distribuidora;Integrated Security=True";
+            con.ConnectionString = "Data Source=LAPTOP-AH2SJNIQ\\SQLEXPRESS;Initial Catalog =distribuidora;Integrated Security=True";
             con.Open();
             string user = txtUsername.Text;
             string password = txtPassword.Text;
@@ -53,12 +53,9 @@ namespace Distribuidora
             }
             con.Close();
         }
-    
-
-
         private void chkPw_CheckedChanged(object sender, EventArgs e)
         {
-            if(chkPw.Checked==true)
+            if (chkPw.Checked == true)
             {
                 txtPassword.UseSystemPasswordChar = false;
             }
@@ -70,8 +67,8 @@ namespace Distribuidora
 
         private void Login_Load(object sender, EventArgs e)
         {
-            
-            SqlConnection con = new SqlConnection("Data Source=LAPTOP-V3B867SN;Initial Catalog =distribuidora;Integrated Security=True");
+
+            SqlConnection con = new SqlConnection("Data Source=LAPTOP-AH2SJNIQ\\SQLEXPRESS;Initial Catalog =distribuidora;Integrated Security=True");
             con.Open();
 
             {
