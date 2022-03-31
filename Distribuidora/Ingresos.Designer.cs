@@ -31,16 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ingresos));
             this.btnconfirmar = new System.Windows.Forms.Button();
             this.btncancelar = new System.Windows.Forms.Button();
-            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.txtdescripcion = new System.Windows.Forms.TextBox();
             this.lblnombre = new System.Windows.Forms.Label();
-            this.txtcodigo = new System.Windows.Forms.TextBox();
-            this.lblcodigo = new System.Windows.Forms.Label();
             this.txtmonto = new System.Windows.Forms.TextBox();
             this.lblmonto = new System.Windows.Forms.Label();
             this.lblfecha = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbltitulo = new System.Windows.Forms.Label();
             this.dtpfecha = new System.Windows.Forms.DateTimePicker();
+            this.txtcodigo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,6 +53,7 @@
             this.btnconfirmar.TabIndex = 32;
             this.btnconfirmar.Text = "Confirmar";
             this.btnconfirmar.UseVisualStyleBackColor = true;
+            this.btnconfirmar.Click += new System.EventHandler(this.btnconfirmar_Click);
             // 
             // btncancelar
             // 
@@ -65,12 +66,12 @@
             this.btncancelar.UseVisualStyleBackColor = true;
             this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
-            // txtnombre
+            // txtdescripcion
             // 
-            this.txtnombre.Location = new System.Drawing.Point(155, 252);
-            this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(142, 20);
-            this.txtnombre.TabIndex = 30;
+            this.txtdescripcion.Location = new System.Drawing.Point(155, 237);
+            this.txtdescripcion.Name = "txtdescripcion";
+            this.txtdescripcion.Size = new System.Drawing.Size(142, 20);
+            this.txtdescripcion.TabIndex = 30;
             // 
             // lblnombre
             // 
@@ -78,37 +79,19 @@
             this.lblnombre.BackColor = System.Drawing.Color.Transparent;
             this.lblnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblnombre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblnombre.Location = new System.Drawing.Point(86, 254);
+            this.lblnombre.Location = new System.Drawing.Point(47, 239);
             this.lblnombre.Name = "lblnombre";
-            this.lblnombre.Size = new System.Drawing.Size(68, 18);
+            this.lblnombre.Size = new System.Drawing.Size(98, 18);
             this.lblnombre.TabIndex = 29;
-            this.lblnombre.Text = "Nombre";
-            // 
-            // txtcodigo
-            // 
-            this.txtcodigo.Location = new System.Drawing.Point(155, 203);
-            this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(142, 20);
-            this.txtcodigo.TabIndex = 28;
-            // 
-            // lblcodigo
-            // 
-            this.lblcodigo.AutoSize = true;
-            this.lblcodigo.BackColor = System.Drawing.Color.Transparent;
-            this.lblcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcodigo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblcodigo.Location = new System.Drawing.Point(86, 203);
-            this.lblcodigo.Name = "lblcodigo";
-            this.lblcodigo.Size = new System.Drawing.Size(62, 18);
-            this.lblcodigo.TabIndex = 27;
-            this.lblcodigo.Text = "Codigo";
+            this.lblnombre.Text = "Descripción";
             // 
             // txtmonto
             // 
-            this.txtmonto.Location = new System.Drawing.Point(155, 154);
+            this.txtmonto.Location = new System.Drawing.Point(155, 193);
             this.txtmonto.Name = "txtmonto";
             this.txtmonto.Size = new System.Drawing.Size(142, 20);
             this.txtmonto.TabIndex = 26;
+            this.txtmonto.TextChanged += new System.EventHandler(this.txtmonto_TextChanged);
             // 
             // lblmonto
             // 
@@ -116,7 +99,7 @@
             this.lblmonto.BackColor = System.Drawing.Color.Transparent;
             this.lblmonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblmonto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblmonto.Location = new System.Drawing.Point(86, 154);
+            this.lblmonto.Location = new System.Drawing.Point(86, 193);
             this.lblmonto.Name = "lblmonto";
             this.lblmonto.Size = new System.Drawing.Size(56, 18);
             this.lblmonto.TabIndex = 25;
@@ -166,6 +149,26 @@
             this.dtpfecha.Size = new System.Drawing.Size(200, 20);
             this.dtpfecha.TabIndex = 21;
             // 
+            // txtcodigo
+            // 
+            this.txtcodigo.Location = new System.Drawing.Point(155, 147);
+            this.txtcodigo.Name = "txtcodigo";
+            this.txtcodigo.Size = new System.Drawing.Size(142, 20);
+            this.txtcodigo.TabIndex = 33;
+            this.txtcodigo.TextChanged += new System.EventHandler(this.txtcodigo_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(86, 149);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 18);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Codigo";
+            // 
             // Ingresos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,19 +176,19 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(712, 464);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtcodigo);
             this.Controls.Add(this.btnconfirmar);
             this.Controls.Add(this.btncancelar);
-            this.Controls.Add(this.txtnombre);
+            this.Controls.Add(this.txtdescripcion);
             this.Controls.Add(this.lblnombre);
-            this.Controls.Add(this.txtcodigo);
-            this.Controls.Add(this.lblcodigo);
             this.Controls.Add(this.txtmonto);
             this.Controls.Add(this.lblmonto);
             this.Controls.Add(this.lblfecha);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbltitulo);
             this.Controls.Add(this.dtpfecha);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Ingresos";
             this.Text = "Ingresos";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -198,15 +201,15 @@
 
         private System.Windows.Forms.Button btnconfirmar;
         private System.Windows.Forms.Button btncancelar;
-        private System.Windows.Forms.TextBox txtnombre;
+        private System.Windows.Forms.TextBox txtdescripcion;
         private System.Windows.Forms.Label lblnombre;
-        private System.Windows.Forms.TextBox txtcodigo;
-        private System.Windows.Forms.Label lblcodigo;
         private System.Windows.Forms.TextBox txtmonto;
         private System.Windows.Forms.Label lblmonto;
         private System.Windows.Forms.Label lblfecha;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbltitulo;
         private System.Windows.Forms.DateTimePicker dtpfecha;
+        private System.Windows.Forms.TextBox txtcodigo;
+        private System.Windows.Forms.Label label1;
     }
 }
