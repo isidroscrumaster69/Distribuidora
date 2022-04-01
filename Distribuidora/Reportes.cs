@@ -50,8 +50,15 @@ namespace Distribuidora
         {
             conexionbd conexion = new conexionbd();
             conexion.abrir();
-           
+            this.FormClosed += new FormClosedEventHandler(CerrarApp);
+
         }
+
+        private void CerrarApp(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
+
         conexionbd con = new conexionbd();
 
         private void button1_Click(object sender, EventArgs e)

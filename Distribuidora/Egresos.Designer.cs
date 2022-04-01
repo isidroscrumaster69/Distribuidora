@@ -35,12 +35,12 @@
             this.lblfecha = new System.Windows.Forms.Label();
             this.lblmonto = new System.Windows.Forms.Label();
             this.txtmonto = new System.Windows.Forms.TextBox();
-            this.lblcodigo = new System.Windows.Forms.Label();
-            this.txtcodigo = new System.Windows.Forms.TextBox();
             this.lblnombre = new System.Windows.Forms.Label();
-            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnconfirmar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,44 +106,25 @@
             this.txtmonto.Size = new System.Drawing.Size(142, 20);
             this.txtmonto.TabIndex = 14;
             // 
-            // lblcodigo
-            // 
-            this.lblcodigo.AutoSize = true;
-            this.lblcodigo.BackColor = System.Drawing.Color.Transparent;
-            this.lblcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcodigo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblcodigo.Location = new System.Drawing.Point(116, 203);
-            this.lblcodigo.Name = "lblcodigo";
-            this.lblcodigo.Size = new System.Drawing.Size(62, 18);
-            this.lblcodigo.TabIndex = 15;
-            this.lblcodigo.Text = "Codigo";
-            // 
-            // txtcodigo
-            // 
-            this.txtcodigo.Location = new System.Drawing.Point(185, 203);
-            this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(142, 20);
-            this.txtcodigo.TabIndex = 16;
-            // 
             // lblnombre
             // 
             this.lblnombre.AutoSize = true;
             this.lblnombre.BackColor = System.Drawing.Color.Transparent;
             this.lblnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblnombre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblnombre.Location = new System.Drawing.Point(116, 254);
+            this.lblnombre.Location = new System.Drawing.Point(116, 214);
             this.lblnombre.Name = "lblnombre";
-            this.lblnombre.Size = new System.Drawing.Size(68, 18);
+            this.lblnombre.Size = new System.Drawing.Size(98, 18);
             this.lblnombre.TabIndex = 17;
-            this.lblnombre.Text = "Nombre";
+            this.lblnombre.Text = "Descripción";
             this.lblnombre.Click += new System.EventHandler(this.label1_Click);
             // 
-            // txtnombre
+            // txtDescripcion
             // 
-            this.txtnombre.Location = new System.Drawing.Point(185, 252);
-            this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(142, 20);
-            this.txtnombre.TabIndex = 18;
+            this.txtDescripcion.Location = new System.Drawing.Point(220, 215);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(142, 20);
+            this.txtDescripcion.TabIndex = 18;
             // 
             // btncancelar
             // 
@@ -165,6 +146,27 @@
             this.btnconfirmar.TabIndex = 20;
             this.btnconfirmar.Text = "Confirmar";
             this.btnconfirmar.UseVisualStyleBackColor = true;
+            this.btnconfirmar.Click += new System.EventHandler(this.btnconfirmar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(116, 271);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 18);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Código";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(220, 272);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(142, 20);
+            this.txtCodigo.TabIndex = 22;
             // 
             // Egresos
             // 
@@ -174,12 +176,12 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(702, 469);
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnconfirmar);
             this.Controls.Add(this.btncancelar);
-            this.Controls.Add(this.txtnombre);
+            this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.lblnombre);
-            this.Controls.Add(this.txtcodigo);
-            this.Controls.Add(this.lblcodigo);
             this.Controls.Add(this.txtmonto);
             this.Controls.Add(this.lblmonto);
             this.Controls.Add(this.lblfecha);
@@ -204,11 +206,11 @@
         private System.Windows.Forms.Label lblfecha;
         private System.Windows.Forms.Label lblmonto;
         private System.Windows.Forms.TextBox txtmonto;
-        private System.Windows.Forms.Label lblcodigo;
-        private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.Label lblnombre;
-        private System.Windows.Forms.TextBox txtnombre;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Button btncancelar;
         private System.Windows.Forms.Button btnconfirmar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtCodigo;
     }
 }

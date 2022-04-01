@@ -57,5 +57,15 @@ namespace Distribuidora
         {
 
         }
+
+        private void Ingresos_Load(object sender, EventArgs e)
+        {
+            this.FormClosed += new FormClosedEventHandler(CerrarApp);
+        }
+
+        private void CerrarApp(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
     }
 }

@@ -19,7 +19,7 @@ namespace Distribuidora
         public Login()
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "Data Source=LAPTOP-AH2SJNIQ\\SQLEXPRESS;Initial Catalog =distribuidora;Integrated Security=True";
+            con.ConnectionString = "Data Source=MANDO-NOTEBOOK;Initial Catalog=distribuidora;Integrated Security=True";
             InitializeComponent();
         }
 
@@ -33,7 +33,7 @@ namespace Distribuidora
             var menu = new Menu();
 
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "Data Source=LAPTOP-AH2SJNIQ\\SQLEXPRESS;Initial Catalog =distribuidora;Integrated Security=True";
+            con.ConnectionString = "Data Source=MANDO-NOTEBOOK;Initial Catalog=distribuidora;Integrated Security=True";
             con.Open();
             string user = txtUsername.Text;
             string password = txtPassword.Text;
@@ -68,12 +68,19 @@ namespace Distribuidora
         private void Login_Load(object sender, EventArgs e)
         {
 
-            SqlConnection con = new SqlConnection("Data Source=LAPTOP-AH2SJNIQ\\SQLEXPRESS;Initial Catalog =distribuidora;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=MANDO-NOTEBOOK;Initial Catalog=distribuidora;Integrated Security=True");
             con.Open();
 
             {
             }
 
+            this.FormClosed += new FormClosedEventHandler(CerrarApp);
+
+        }
+
+        private void CerrarApp(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
 
         private void lblcon_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
