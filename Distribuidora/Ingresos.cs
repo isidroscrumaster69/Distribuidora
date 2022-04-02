@@ -45,7 +45,7 @@ namespace Distribuidora
             comando.Parameters.AddWithValue("@descrip_ingreso", txtdescripcion.Text);
             comando.Parameters.AddWithValue("@date_ingreso", dtpfecha.Value);
             comando.Parameters.AddWithValue("@value_ingreso", txtmonto.Text);
-            comando.Parameters.AddWithValue("@id_usuario", txtcodigo.Text);
+            comando.Parameters.AddWithValue("@id_usuario", "1");
             comando.ExecuteNonQuery();
             MessageBox.Show("Ingreso Registro");
             con.cerrar();

@@ -9,7 +9,7 @@ namespace Distribuidora
 {
     internal class conexionbd
     {
-        string cadena = "Data Source=DESKTOP-32488B5\\SQLEXPRESS;Initial Catalog =distribuidora;Integrated Security=True";
+        string cadena = "Data Source=LAPTOP-AH2SJNIQ\\SQLEXPRESS;Initial Catalog =distribuidora;Integrated Security=True";
         public SqlConnection conectarbd = new SqlConnection();
         public conexionbd()
         {
