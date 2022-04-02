@@ -29,18 +29,30 @@ namespace Distribuidora
         conexionbd con = new conexionbd();
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-           
+            
             var menu = new Menu();
-
+            
             con.abrir();
-            string user = txtUsername.Text;
-            string password = txtPassword.Text;
-            SqlCommand cmd = new SqlCommand("select name_user,password_user from users where name_user='" + txtUsername.Text + "'and password_user='" + txtPassword.Text + "'", con.conectarbd);
+            SqlCommand cmd = new SqlCommand("select * from users inner join role on users.rol=role.roleid where name_user = @name_user and password_user = @password_user", con.conectarbd);
+            cmd.Parameters.AddWithValue("@name_user", txtUsername.Text);
+            cmd.Parameters.AddWithValue("@password_user", txtPassword.Text);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             if (dt.Rows.Count > 0)
             {
+                string usertype = dt.Rows[0][8].ToString();
+                if (usertype == "admin")
+                {
+                    
+                    conexionbd.type = "A";
+                }
+                else if (usertype == "user")
+                {
+                   
+                    conexionbd.type= "U";
+                }
+
                 MessageBox.Show("Login exitoso", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 menu.Show();
                 this.Hide();
@@ -48,9 +60,15 @@ namespace Distribuidora
             else
             {
                 MessageBox.Show("Nombre de usuario o contrasena incorrecto", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtUsername.Clear();
+                txtPassword.Clear();
+                txtUsername.Focus();
             }
-            con.cerrar();
-        }
+            con.cerrar(); 
+
+
+
+            }
         private void chkPw_CheckedChanged(object sender, EventArgs e)
         {
             if (chkPw.Checked == true)
@@ -82,6 +100,11 @@ namespace Distribuidora
             MessageBox.Show("Contactese con el gerente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-
+        private void lblRegistrarse_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var registro = new Registro();
+            registro.Show();
+            this.Hide();
+        }
     }
 }

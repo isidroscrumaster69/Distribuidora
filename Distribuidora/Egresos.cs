@@ -49,25 +49,46 @@ namespace Distribuidora
         conexionbd con = new conexionbd();
         private void btnconfirmar_Click(object sender, EventArgs e)
         {
-
-            string query = "INSERT INTO egresos (descrip_egreso, date_egreso, value_egreso, id_usuario) VALUES (@descrip_ingreso,@date_ingreso,@value_ingreso,@id_usuario)";
-            con.abrir();
-            SqlCommand comando = new SqlCommand(query, con.conectarbd);
-            comando.Parameters.AddWithValue("@descrip_ingreso", txtDescripcion.Text);
-            comando.Parameters.AddWithValue("@date_ingreso", dtpfecha.Value);
-            comando.Parameters.AddWithValue("@value_ingreso", txtmonto.Text);
-            comando.Parameters.AddWithValue("@id_usuario", "1");
-            comando.ExecuteNonQuery();
-            MessageBox.Show("Egreso Registrado");
-            con.cerrar();
-            txtDescripcion.Clear();
-            txtmonto.Clear();
+            if (txtDescripcion.Text == "" || txtmonto.Text == "")
+            {
+                MessageBox.Show("No deje vacios los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                string query = "INSERT INTO egresos (descrip_egreso, date_egreso, value_egreso, id_usuario) VALUES (@descrip_ingreso,@date_ingreso,@value_ingreso,@id_usuario)";
+                con.abrir();
+                SqlCommand comando = new SqlCommand(query, con.conectarbd);
+                comando.Parameters.AddWithValue("@descrip_ingreso", txtDescripcion.Text);
+                comando.Parameters.AddWithValue("@date_ingreso", dtpfecha.Value);
+                comando.Parameters.AddWithValue("@value_ingreso", txtmonto.Text);
+                comando.Parameters.AddWithValue("@id_usuario", "1");
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Egreso Registrado");
+                con.cerrar();
+                txtDescripcion.Clear();
+                txtmonto.Clear();
+            }
 
         }
 
         private void label1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtmonto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+             (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

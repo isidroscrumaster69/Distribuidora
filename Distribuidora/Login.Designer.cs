@@ -38,6 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblcon = new System.Windows.Forms.LinkLabel();
+            this.lblRegistrarse = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +59,7 @@
             // 
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(263, 120);
+            this.txtUsername.MaxLength = 15;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(229, 26);
             this.txtUsername.TabIndex = 1;
@@ -66,6 +68,7 @@
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(263, 224);
+            this.txtPassword.MaxLength = 25;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(229, 26);
             this.txtPassword.TabIndex = 2;
@@ -91,7 +94,7 @@
             this.chkPw.Name = "chkPw";
             this.chkPw.Size = new System.Drawing.Size(166, 24);
             this.chkPw.TabIndex = 5;
-            this.chkPw.Text = "Mostrar contrasena";
+            this.chkPw.Text = "Mostrar contraseña";
             this.chkPw.UseVisualStyleBackColor = false;
             this.chkPw.CheckedChanged += new System.EventHandler(this.chkPw_CheckedChanged);
             // 
@@ -115,7 +118,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 18);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Contrasena";
+            this.label3.Text = "Contraseña";
             // 
             // pictureBox1
             // 
@@ -142,6 +145,20 @@
             this.lblcon.Text = "¿Olvido su contraseña?";
             this.lblcon.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblcon_LinkClicked);
             // 
+            // lblRegistrarse
+            // 
+            this.lblRegistrarse.AutoSize = true;
+            this.lblRegistrarse.BackColor = System.Drawing.Color.White;
+            this.lblRegistrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistrarse.LinkColor = System.Drawing.Color.Black;
+            this.lblRegistrarse.Location = new System.Drawing.Point(326, 386);
+            this.lblRegistrarse.Name = "lblRegistrarse";
+            this.lblRegistrarse.Size = new System.Drawing.Size(91, 20);
+            this.lblRegistrarse.TabIndex = 12;
+            this.lblRegistrarse.TabStop = true;
+            this.lblRegistrarse.Text = "Registrarse";
+            this.lblRegistrarse.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblRegistrarse_LinkClicked);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,6 +167,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(816, 468);
+            this.Controls.Add(this.lblRegistrarse);
             this.Controls.Add(this.lblcon);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
@@ -179,6 +197,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel lblcon;
+        private System.Windows.Forms.LinkLabel lblRegistrarse;
     }
 }
 

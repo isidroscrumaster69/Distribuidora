@@ -19,6 +19,23 @@ namespace Distribuidora
 
         private void Menu_Load(object sender, EventArgs e)
         {
+            if (conexionbd.type == "A")
+            {
+                btnIngreso.Visible = true;
+                btnEgreso.Visible = true;
+                btnReportes.Visible = true;
+                btnEmpleados.Visible = true;
+                
+                
+            }
+            else if (conexionbd.type == "U")
+            {
+                btnIngreso.Visible = true;
+                btnEgreso.Visible = true;
+                btnReportes.Visible = true;
+                btnEmpleados.Visible = false;
+                
+            }
             this.FormClosed += new FormClosedEventHandler(CerrarApp);
         }
 
@@ -57,6 +74,13 @@ namespace Distribuidora
             this.Close();
             login.Show();
 
+        }
+
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            var emp = new Empleados();
+            emp.Show();
+            this.Hide();
         }
     }
 }

@@ -35,6 +35,7 @@
             this.btnEgreso = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnEmpleados = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +66,7 @@
             // btnIngreso
             // 
             this.btnIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngreso.Location = new System.Drawing.Point(152, 164);
+            this.btnIngreso.Location = new System.Drawing.Point(147, 147);
             this.btnIngreso.Name = "btnIngreso";
             this.btnIngreso.Size = new System.Drawing.Size(150, 89);
             this.btnIngreso.TabIndex = 14;
@@ -76,7 +77,7 @@
             // btnEgreso
             // 
             this.btnEgreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEgreso.Location = new System.Drawing.Point(531, 164);
+            this.btnEgreso.Location = new System.Drawing.Point(529, 147);
             this.btnEgreso.Name = "btnEgreso";
             this.btnEgreso.Size = new System.Drawing.Size(150, 89);
             this.btnEgreso.TabIndex = 15;
@@ -87,7 +88,7 @@
             // btnReportes
             // 
             this.btnReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportes.Location = new System.Drawing.Point(341, 343);
+            this.btnReportes.Location = new System.Drawing.Point(341, 294);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(150, 89);
             this.btnReportes.TabIndex = 16;
@@ -105,6 +106,17 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnEmpleados
+            // 
+            this.btnEmpleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpleados.Location = new System.Drawing.Point(729, 294);
+            this.btnEmpleados.Name = "btnEmpleados";
+            this.btnEmpleados.Size = new System.Drawing.Size(150, 89);
+            this.btnEmpleados.TabIndex = 18;
+            this.btnEmpleados.Text = "Empleados";
+            this.btnEmpleados.UseVisualStyleBackColor = true;
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,6 +124,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(939, 561);
+            this.Controls.Add(this.btnEmpleados);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnReportes);
             this.Controls.Add(this.btnEgreso);
@@ -135,5 +148,6 @@
         private System.Windows.Forms.Button btnEgreso;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnEmpleados;
     }
 }
