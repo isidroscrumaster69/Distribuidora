@@ -61,7 +61,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(222, 33);
             this.label1.TabIndex = 13;
-            this.label1.Text = "Menu Principal";
+            this.label1.Text = "Menú Principal";
             // 
             // btnIngreso
             // 
@@ -102,7 +102,7 @@
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(121, 37);
             this.btnSalir.TabIndex = 17;
-            this.btnSalir.Text = "Cerrar sesion";
+            this.btnSalir.Text = "Salir del programa";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 

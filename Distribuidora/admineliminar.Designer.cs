@@ -166,7 +166,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "admineliminar";
-            this.Text = "admineliminar";
+            this.Text = "Eliminar un empleado";
             this.Load += new System.EventHandler(this.admineliminar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

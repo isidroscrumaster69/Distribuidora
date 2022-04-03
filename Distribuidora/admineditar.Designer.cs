@@ -250,7 +250,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "admineditar";
-            this.Text = "admineditar";
+            this.Text = "Editar un empleado";
             this.Load += new System.EventHandler(this.admineditar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
