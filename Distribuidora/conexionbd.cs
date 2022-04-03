@@ -4,16 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data;
+using System.Net;
+using System.Windows;
 
 namespace Distribuidora
 {
     internal class conexionbd
     {
-        string cadena = "Data Source=DESKTOP-32488B5\\SQLEXPRESS;Initial Catalog =distribuidora;Integrated Security=True";
+
+        //string cadena = "Data Source=LAPTOP-AH2SJNIQ\\SQLEXPRESS;Initial Catalog =distribuidora;Integrated Security=True";
         public SqlConnection conectarbd = new SqlConnection();
         public conexionbd()
         {
-            conectarbd.ConnectionString = cadena; 
+            string nombre_server = Dns.GetHostName();
+            conectarbd.ConnectionString = "Data Source = "+nombre_server+"\\SQLEXPRESS; Initial Catalog = distribuidora; Integrated Security = True"; 
         }
         public void abrir()
         {
